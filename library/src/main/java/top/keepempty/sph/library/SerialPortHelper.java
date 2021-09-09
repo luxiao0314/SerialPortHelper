@@ -2,6 +2,8 @@ package top.keepempty.sph.library;
 
 import android.util.Log;
 
+import java.util.Arrays;
+
 /**
  * 串口助手
  * @author ：frey
@@ -162,6 +164,7 @@ public class SerialPortHelper {
      */
     public void addCommands(String hex,int flag){
         byte[] bytes = DataConversion.decodeHexString(hex);
+        Log.d(TAG, "发送命令：" + Arrays.toString(bytes));
         addCommands(bytes,flag);
     }
 

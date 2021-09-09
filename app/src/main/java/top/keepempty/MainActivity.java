@@ -97,10 +97,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     Toast.makeText(MainActivity.this,"请输入发送命令！",Toast.LENGTH_LONG).show();
                     return;
                 }
-                if (sendTxt.length() % 2 == 1) {
-                    Toast.makeText(MainActivity.this,"命令错误！",Toast.LENGTH_LONG).show();
-                    return;
-                }
                 serialPortHelper.addCommands(sendTxt);
             }
         });
